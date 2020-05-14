@@ -1,0 +1,213 @@
+openapi: 3.0.1
+info:
+  description: This is a sample vulnerable server.
+  title: VulnApp Simple Generator
+  version: 1.0.0
+servers:
+- url: /v1
+paths:
+  /cwe/918/00001:
+    get:
+      description: vulnID00001
+      operationId: cwe918vid00001
+      parameters:
+      - description: Vulnerability ID 00001
+        in: query
+        name: vinput
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            text/html:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+          description: successful operation
+        default:
+          content: {}
+          description: successful operation
+      summary: Server-Side Request Forgery (SSRF)
+      tags:
+      - cwe918
+      x-openapi-router-controller: Cwe918Controller
+      x-openapi-router-service: Cwe918Service
+  /cwe/918/00002:
+    get:
+      description: vulnID00002
+      operationId: cwe918vid00002
+      parameters:
+      - description: Vulnerability ID 00002
+        in: query
+        name: vinput
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            text/html:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+          description: successful operation
+        default:
+          content: {}
+          description: successful operation
+      summary: Server-Side Request Forgery (SSRF)
+      tags:
+      - cwe918
+      x-openapi-router-controller: Cwe918Controller
+      x-openapi-router-service: Cwe918Service
+  /cwe/611/00001:
+    post:
+      description: vulnID00001
+      operationId: cwe611vid00001
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                vinput:
+                  description: Vulnerability ID 00001
+                  type: string
+              required:
+              - vinput
+        required: true
+      responses:
+        "200":
+          content:
+            text/html:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+          description: successful operation
+        default:
+          content: {}
+          description: successful operation
+      summary: External XML Entity Injection
+      tags:
+      - cwe611
+      x-openapi-router-controller: Cwe611Controller
+      x-openapi-router-service: Cwe611Service
+  /cwe/78/00001:
+    get:
+      description: vulnID00001
+      operationId: cwe78vid00001
+      parameters:
+      - description: Vulnerability ID 00001
+        in: query
+        name: vinput
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            text/html:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+          description: successful operation
+        default:
+          content: {}
+          description: successful operation
+      summary: INSERT CWE CATEGORY TYPE HERE (e.g. SSRF)
+      tags:
+      - cwe78
+      x-openapi-router-controller: Cwe78Controller
+      x-openapi-router-service: Cwe78Service
+  /cwe/22/00001:
+    get:
+      description: vulnID00001
+      operationId: cwe22vid00001
+      parameters:
+      - description: Vulnerability ID 00001
+        in: query
+        name: vinput
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            text/html:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+          description: successful operation
+        default:
+          content: {}
+          description: successful operation
+      summary: Improper Limitation of a Pathname to a Restricted Directory ('Path
+        Traversal')
+      tags:
+      - cwe22
+      x-openapi-router-controller: Cwe22Controller
+      x-openapi-router-service: Cwe22Service
+  /cwe/79/00001:
+    get:
+      description: vulnID00001
+      operationId: cwe79vid00001
+      parameters:
+      - description: Vulnerability ID 00001
+        in: query
+        name: vinput
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            text/html:
+              schema:
+                type: string
+          description: successful operation
+        default:
+          content: {}
+          description: successful operation
+      summary: Cross-Site-Scripting in tag (XSS)
+      tags:
+      - cwe79
+      x-openapi-router-controller: Cwe79Controller
+      x-openapi-router-service: Cwe79Service
+components:
+  schemas:
+    Dummy:
+      description: A dummy object for c# to compile
+      properties:
+        code:
+          format: int32
+          type: integer
+        type:
+          type: string
+        message:
+          type: string
+      title: A dummy object for c# to compile
+      type: object
